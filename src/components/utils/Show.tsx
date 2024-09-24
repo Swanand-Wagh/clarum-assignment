@@ -25,6 +25,7 @@ const When: React.FunctionComponent<Readonly<WhenProps>> = ({
   children,
   isTrue,
 }): React.ReactNode => isTrue && children;
+
 const Else: React.FunctionComponent<Readonly<ReactChildrenProp>> = ({
   children,
 }): React.ReactNode => children;

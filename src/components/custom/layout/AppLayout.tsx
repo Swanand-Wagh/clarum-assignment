@@ -1,7 +1,7 @@
 import React from "react";
 import { ReactChildrenProp } from "@/interfaces/utils";
-import { Header } from "./header";
-import { Footer } from "./footer";
+import { Header } from "./Header";
+import { Footer } from "./Footer";
 
 export const AppLayout: React.FunctionComponent<
   Readonly<ReactChildrenProp>

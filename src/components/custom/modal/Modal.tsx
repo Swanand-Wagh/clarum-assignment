@@ -32,7 +32,6 @@ export const Modal = ({
 const ModalTrigger = ({ children }: Readonly<ReactChildrenProp>) => (
   <DialogTrigger asChild>{children}</DialogTrigger>
 );
-
 const ModalContent = ({
   children,
   classnames,
