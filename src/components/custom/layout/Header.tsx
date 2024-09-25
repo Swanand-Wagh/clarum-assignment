@@ -1,19 +1,19 @@
-import React from "react";
-import Link from "next/link";
-import { GitHubLogoIcon } from "@radix-ui/react-icons";
+import React from 'react';
+import Link from 'next/link';
+import { GitHubLogoIcon } from '@radix-ui/react-icons';
 
 export const Header: React.FunctionComponent = (): JSX.Element => {
   return (
     <header className="sticky top-0 z-50 w-full border-border/40 bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="px-12 flex gap-8 justify-between h-14 max-w-screen-3xl items-center">
-        <Link href="/" className="flex items-center font-medium gap-0.5">
+      <div className="max-w-screen-3xl flex h-14 items-center justify-between gap-8 px-12">
+        <Link href="/" className="flex items-center gap-0.5 font-medium">
           Clarum Assignment
         </Link>
         <Link
           href="https://github.com/Swanand-Wagh/clarum-assignment"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-3 transition-colors hover:text-foreground/75 text-foreground"
+          className="flex items-center gap-3 text-foreground transition-colors hover:text-foreground/75"
         >
           <span className="font-medium">Swanand Wagh</span>
           <GitHubLogoIcon className="scale-150" />

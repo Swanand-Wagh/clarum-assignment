@@ -1,2 +1,2 @@
-export * from "./Each";
-export * from "./Show";
+export * from './Each';
+export * from './Show';

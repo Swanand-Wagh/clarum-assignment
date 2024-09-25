@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 export interface ReactChildrenProp {
   children: React.ReactNode;
@@ -17,8 +17,7 @@ export interface WhenProps extends ReactChildrenProp {
   isTrue: boolean;
 }
 
-export interface ShowComponent
-  extends React.FunctionComponent<Readonly<ShowProps>> {
+export interface ShowComponent extends React.FunctionComponent<Readonly<ShowProps>> {
   When: React.FunctionComponent<WhenProps>;
   Else: React.FunctionComponent<ReactChildrenProp>;
 }
