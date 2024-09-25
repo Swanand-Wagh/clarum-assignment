@@ -6,12 +6,7 @@ export const Footer: React.FunctionComponent = (): JSX.Element => {
     <footer className="px-12 py-4 border-t bg-white">
       <p className="flex items-center justify-center w-full text-muted-foreground text-sm font-medium">
         Developed by &nbsp;
-        <Link
-          href="https://github.com/Swanand-Wagh"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="underline"
-        >
+        <Link href="https://github.com/Swanand-Wagh" target="_blank" rel="noopener noreferrer" className="underline">
           Swanand Wagh
         </Link>{" "}
         . The source code is available on &nbsp;
