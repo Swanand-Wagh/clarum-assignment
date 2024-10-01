@@ -63,6 +63,7 @@ const App: NextPage = (): JSX.Element => {
                   View Numbers
                 </Button>
               </Modal.Trigger>
+
               <Modal.Content
                 modalTitle="Year Sales Numbers"
                 showOverlay
@@ -87,11 +88,13 @@ const App: NextPage = (): JSX.Element => {
                     )}
                   />
                 </div>
+
                 <Modal.Footer modalCloseText="Close">
                   <Modal open={openAddNumbersModal} onOpenChange={setOpenAddNumbersModal}>
                     <Modal.Trigger>
                       <Button className="flex items-center gap-1">+ Add More Numbers</Button>
                     </Modal.Trigger>
+
                     <Modal.Content
                       modalTitle="Add More Numbers"
                       showOverlay={false}
@@ -108,6 +111,7 @@ const App: NextPage = (): JSX.Element => {
                         adding the sales for the year <span className="font-semibold">{lastYear + 1}</span>, you will be
                         able to see the updated chart.
                       </p>
+
                       <SalesForm
                         lastYear={lastYear}
                         setChartData={setChartData}

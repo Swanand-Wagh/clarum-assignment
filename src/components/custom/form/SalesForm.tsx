@@ -53,6 +53,7 @@ export const SalesForm: React.FunctionComponent<Readonly<SalesFormProps>> = ({
             </FormItem>
           )}
         />
+
         <Modal.Footer modalCloseText="Cancel">
           <Button type="submit" className="flex items-center gap-1">
             + Add
