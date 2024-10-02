@@ -18,7 +18,6 @@ export const BarChart = <TChartData,>({
           <CardTitle>{chartTitle}</CardTitle>
         </div>
       </CardHeader>
-
       <Show>
         <Show.When isTrue={isDataFetching}>
           <ChartSkeleton />
@@ -27,7 +26,6 @@ export const BarChart = <TChartData,>({
           <Chart<TChartData> data={chartData} />
         </Show.Else>
       </Show>
-
       <CardFooter className="flex items-center justify-between gap-8 text-sm">
         <div className="leading-none text-muted-foreground">{chartSubTitle}</div>
         {children}

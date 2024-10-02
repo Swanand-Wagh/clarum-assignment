@@ -7,13 +7,13 @@ import { SalesFormProps } from '@/interfaces/salesForm';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
-import { Modal } from '../modal';
 import { Button } from '@/components/ui/button';
+import { CustomModalFooter } from '../modal/CustomModal';
 
 export const SalesForm: React.FunctionComponent<Readonly<SalesFormProps>> = ({
   lastYear,
   setChartData,
-  setOpenAddNumbersModal,
+  handleAddModalClose,
 }): JSX.Element => {
   const formSchema = z.object({
     sales: z
@@ -33,7 +33,7 @@ export const SalesForm: React.FunctionComponent<Readonly<SalesFormProps>> = ({
 
   const onSubmit = (values: z.infer<typeof formSchema>) => {
     setChartData((prev) => [...prev, { year: lastYear + 1, sales: parseInt(values.sales) }]);
-    setOpenAddNumbersModal(false);
+    handleAddModalClose();
     form.reset();
   };
 
@@ -53,12 +53,11 @@ export const SalesForm: React.FunctionComponent<Readonly<SalesFormProps>> = ({
             </FormItem>
           )}
         />
-
-        <Modal.Footer modalCloseText="Cancel">
+        <CustomModalFooter onClose={handleAddModalClose}>
           <Button type="submit" className="flex items-center gap-1">
             + Add
           </Button>
-        </Modal.Footer>
+        </CustomModalFooter>
       </form>
     </Form>
   );

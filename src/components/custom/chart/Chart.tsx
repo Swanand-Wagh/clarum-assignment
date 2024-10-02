@@ -40,16 +40,14 @@ export const Chart = <TChartData,>({ data }: Readonly<ChartProps<TChartData>>): 
             axisLine={true}
             tickFormatter={(value) => millify(value)}
           />
-
           <Tooltip cursor={false} content={<CustomTooltip />} />
-
           <Bar
-            radius={8}
             dataKey="sales"
             className="opacity-75"
             fill="var(--color-sales)"
+            radius={8}
             label={renderCustomBarLabel}
-          />
+          ></Bar>
         </BarChartPrimitive>
       </ChartContainer>
     </CardContent>
